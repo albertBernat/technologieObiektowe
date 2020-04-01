@@ -1,0 +1,22 @@
+Albert Bernat albertbernat97@gmail.com 1ID21B
+
+Temat: 44. Testowanie jednostkowe
+
+Tematy prac inżynierskich: Platforma IoT do zarządzania klastrem stacji pogodowych. Stacja klimatyczna monitorująca warunki pogodowe.
+
+Spis technologii: Java lub Kotlin(do decyzji później), biblioteki również będą dopisane po ich użyciu w projekcie. 
+
+Lista funkcjonalności:
+ - Uruchamianie testów 
+ - generowanie raportów do konsoli
+ - generowanie raportów do html
+
+Podział pracy: 100% Albert Bernat
+
+Harmonogram pracy:
+ - Etap 2: Wywoływanie metody testowej
+ - Etap 3: Wywoływanie metody setUp
+ - Etap 4: Wywoływanie meteody tearDown w normalnym przypadku oraz kiedy test zakończy się niepowodzeniem
+ - Etap 5: Uruchamianie wielu testów
+ - Etap 6: Generowanie raportu do konsoli
+ - Etap 7: Generowanie raportu do html
