@@ -1,0 +1,10 @@
+Co zosta³o zrealizowane w aktualnym etapie: inicjalizacja projektu mavenowego, dodanie funkcjonalnoœci wywo³ywania metody testowej.
+
+
+Co bêdzie realizowane w kolejnym etapie: wywo³ywanie metody setup przed metod¹ testow¹
+
+
+Jakie s¹ ewentualne problemy: brak
+
+
+Statystyki znajduj¹ siê w pliku: statystyki_etap2.bmp
