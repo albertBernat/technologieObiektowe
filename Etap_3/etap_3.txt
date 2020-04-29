@@ -1,0 +1,8 @@
+Co zostało zrealizowane w aktualnym etapie: dodanie metody setUp
+
+
+Co będzie realizowane w kolejnym etapie: dodanie metody onTearDown
+
+Jakie są ewentualne problemy: brak
+
+Statystyki znajdują się w pliku: statystyki_etap3.bmp
