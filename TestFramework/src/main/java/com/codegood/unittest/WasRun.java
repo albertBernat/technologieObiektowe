@@ -6,11 +6,18 @@ public class WasRun extends TestCase {
 
     public WasRun(String name) {
         super(name);
+    }
+
+    @Override
+    public void setUp() {
         this.wasRun = false;
+        this.wasSetUp = true;
     }
 
     @SuppressWarnings("unused")
     public void testMethod() {
         wasRun = true;
     }
+
+
 }

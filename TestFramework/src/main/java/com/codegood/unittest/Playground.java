@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Playground {
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        new TestCaseTest("testMethod").testRunning();
+        new TestCaseTest("testRunning").run();
+        new TestCaseTest("testSetUp").run();
     }
 }
