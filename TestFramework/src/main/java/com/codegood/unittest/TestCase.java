@@ -19,8 +19,9 @@ public class TestCase {
         } catch (Exception e) {
             e.printStackTrace();
             result.testFailed();
+        } finally {
+            this.tearDown();
         }
-        this.tearDown();
     }
 
     public void tearDown() {

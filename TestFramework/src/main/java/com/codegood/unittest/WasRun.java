@@ -27,6 +27,7 @@ public class WasRun extends TestCase {
     }
 
     public void testBrokenMethod() throws Exception {
+        log = log + " testBrokenMethod";
         throw new Exception();
     }
 

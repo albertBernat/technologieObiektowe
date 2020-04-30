@@ -13,6 +13,7 @@ public class Playground {
         testSuite.add(new TestCaseTest("testFailedResultFormatting"));
         testSuite.add(new TestCaseTest("testFailedResult"));
         testSuite.add(new TestCaseTest("testSuite"));
+        testSuite.add(new TestCaseTest("testTearDownWhenMethodFails"));
         TestResult result = new TestResult();
         testSuite.run(result);
         System.out.println(result.summary());

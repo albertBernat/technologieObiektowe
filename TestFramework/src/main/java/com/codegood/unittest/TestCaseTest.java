@@ -47,4 +47,11 @@ public class TestCaseTest extends TestCase {
         assert "2 run, 1 failed".equals(result.summary());
     }
 
+    public void testTearDownWhenMethodFails() {
+        TestResult result = new TestResult();
+        WasRun testBrokenMethod = new WasRun("testBrokenMethod");
+        testBrokenMethod.run(result);
+        assert "setUp testBrokenMethod tearDown".equals(testBrokenMethod.log);
+    }
+
 }
