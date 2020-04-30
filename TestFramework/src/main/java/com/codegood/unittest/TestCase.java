@@ -11,15 +11,21 @@ public class TestCase {
         this.name = name;
     }
 
-    public void run() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public TestResult run() {
+        TestResult result = new TestResult();
+        result.testStarted();
         this.setUp();
-        Method method = this.getClass().getMethod(this.name);
-        method.invoke(this);
+        try {
+            Method method = this.getClass().getMethod(this.name);
+            method.invoke(this);
+        } catch (Exception e) {
+            result.testFailed();
+        }
         this.tearDown();
+        return result;
     }
 
     public void tearDown() {
-
     }
 
     public void setUp() {
