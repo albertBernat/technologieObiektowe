@@ -1,0 +1,10 @@
+Co zostało zrealizowane w aktualnym etapie: dodanie metody tearDown, dodanie metody tearDown nawet jesli test się nie powiedzie. Dodanie zliczania testów i niepowiedzionych testów. Uruchamianie wielu testów na raz.
+
+
+Co będzie realizowane w kolejnym etapie: dodanie adnotacji do oznaczania metod testowych celem nie wywoływania testu nazwą metody
+
+
+Jakie są ewentualne problemy: brak
+
+
+Statystyki znajdują się w pliku: statystyki_etap4.bmp
