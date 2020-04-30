@@ -15,13 +15,9 @@ public class TestCaseTest extends TestCase {
         this.test = new WasRun("testMethod");
     }
 
-    public void testRunning() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+    public void testTemplateMethod() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         test.run();
-        assert test.wasRun;
+        assert "setUp testMethod tearDown".equals(test.log);
     }
 
-    public void testSetUp() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        test.run();
-        assert test.wasSetUp;
-    }
 }

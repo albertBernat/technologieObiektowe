@@ -6,7 +6,6 @@ import java.lang.reflect.Method;
 public class TestCase {
 
     private final String name;
-    public boolean wasSetUp;
 
     public TestCase(String name) {
         this.name = name;
@@ -16,9 +15,13 @@ public class TestCase {
         this.setUp();
         Method method = this.getClass().getMethod(this.name);
         method.invoke(this);
+        this.tearDown();
+    }
+
+    public void tearDown() {
+
     }
 
     public void setUp() {
-        this.wasSetUp = true;
     }
 }
