@@ -1,6 +1,5 @@
 package com.codegood.unittest;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class TestCase {
@@ -11,18 +10,17 @@ public class TestCase {
         this.name = name;
     }
 
-    public TestResult run() {
-        TestResult result = new TestResult();
+    public void run(TestResult result) {
         result.testStarted();
         this.setUp();
         try {
             Method method = this.getClass().getMethod(this.name);
             method.invoke(this);
         } catch (Exception e) {
+            e.printStackTrace();
             result.testFailed();
         }
         this.tearDown();
-        return result;
     }
 
     public void tearDown() {

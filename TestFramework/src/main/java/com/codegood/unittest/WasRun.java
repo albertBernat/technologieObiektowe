@@ -11,19 +11,19 @@ public class WasRun extends TestCase {
 
     @Override
     public void setUp() {
-        this.wasRun = false;
-        this.log = "setUp";
+        wasRun = false;
+        log = "setUp";
     }
 
     @Override
     public void tearDown() {
-        this.log = this.log + " tearDown";
+        log = log + " tearDown";
     }
 
     @SuppressWarnings("unused")
     public void testMethod() {
         wasRun = true;
-        this.log = this.log + " testMethod";
+        log = log + " testMethod";
     }
 
     public void testBrokenMethod() throws Exception {
