@@ -1,4 +1,4 @@
-package com.codegood.unittest;
+package com.codegood.unittest.core;
 
 public class WasRun extends TestCase {
 

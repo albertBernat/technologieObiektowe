@@ -1,5 +1,9 @@
 package com.codegood.unittest;
 
+import com.codegood.unittest.core.TestCaseTest;
+import com.codegood.unittest.core.TestResult;
+import com.codegood.unittest.core.TestSuite;
+
 import java.lang.reflect.InvocationTargetException;
 
 public class Playground {

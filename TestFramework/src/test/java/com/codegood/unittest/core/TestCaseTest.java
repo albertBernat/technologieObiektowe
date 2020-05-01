@@ -1,4 +1,4 @@
-package com.codegood.unittest;
+package com.codegood.unittest.core;
 
 public class TestCaseTest extends TestCase {
 
@@ -63,7 +63,4 @@ public class TestCaseTest extends TestCase {
         testBrokenMethod.run(result);
         assert "setUp testBrokenMethod tearDown".equals(testBrokenMethod.log);
     }
-
-
-
 }

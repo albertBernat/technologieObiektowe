@@ -1,13 +1,24 @@
-package com.codegood.unittest;
+package com.codegood.unittest.core;
 
 import java.lang.reflect.Method;
 
 public class TestCase {
 
-    private final String name;
+    private String name;
 
     public TestCase(String name) {
         this.name = name;
+    }
+
+    public TestCase() {
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void run(TestResult result) {
@@ -15,10 +26,13 @@ public class TestCase {
         this.setUp();
         try {
             Method method = this.getClass().getMethod(this.name);
+            result.setLastTestedMethodFullName(method.getDeclaringClass().getCanonicalName() + "." + method.getName());
             method.invoke(this);
+            result.setHasPassed(true);
         } catch (Exception e) {
             e.printStackTrace();
             result.testFailed();
+            result.setHasPassed(false);
         } finally {
             this.tearDown();
         }
