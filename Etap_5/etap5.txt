@@ -1,0 +1,10 @@
+Co zostało zrealizowane w aktualnym etapie: Dodanie demo projektu do otestowania, Generowanie raportu do konsoli, odpalanie wielu testów na raz
+
+
+Co będzie realizowane w kolejnym etapie: w harmonogramie nastepnym krokiem było zrealizowanie generowania raportu do konsoli, z racji że to jest już gotowe to zrealizowany zostanie mechanizm do przeprowadzania asercji
+
+
+Jakie są ewentualne problemy: brak
+
+
+Statystyki znajdują się w pliku: statystyki_etap5.bmp
