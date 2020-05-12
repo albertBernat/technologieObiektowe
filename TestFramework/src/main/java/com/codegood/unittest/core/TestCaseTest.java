@@ -28,14 +28,14 @@ public class TestCaseTest extends TestCase {
     @Test
     public void testResult() {
         test.run(testResult);
-        assert "1 run, 0 failed".equals(testResult.summary());
+        assert "1 run, 1 successful, 0 failed".equals(testResult.summary());
     }
 
     @Test
     public void testFailedResult() {
         WasRun testFailedResult = new WasRun("testBrokenMethod");
         testFailedResult.run(testResult);
-        assert "1 run, 1 failed".equals(testResult.summary());
+        assert "1 run, 0 successful, 1 failed".equals(testResult.summary());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class TestCaseTest extends TestCase {
         TestResult result = new TestResult();
         result.testStarted();
         result.testFailed();
-        assert "1 run, 1 failed".equals(result.summary());
+        assert "1 run, 0 successful, 1 failed".equals(result.summary());
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TestCaseTest extends TestCase {
         suite.add(new WasRun("testBrokenMethod"));
         TestResult result = new TestResult();
         suite.run(result);
-        assert "2 run, 1 failed".equals(result.summary());
+        assert "2 run, 1 successful, 1 failed".equals(result.summary());
     }
 
     @Test

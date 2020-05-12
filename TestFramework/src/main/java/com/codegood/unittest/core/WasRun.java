@@ -26,6 +26,7 @@ public class WasRun extends TestCase {
         log = log + " testMethod";
     }
 
+    @SuppressWarnings("unused")
     public void testBrokenMethod() throws Exception {
         log = log + " testBrokenMethod";
         throw new Exception();

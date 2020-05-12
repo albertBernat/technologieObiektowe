@@ -10,16 +10,22 @@ import java.util.Set;
 
 public class TestRunner {
 
+    private String packageToScan;
+
+    public TestRunner(String packageToScan) {
+        this.packageToScan = packageToScan;
+    }
+
     public static void main(String[] args) {
-        TestRunner testRunner = new TestRunner();
+        TestRunner testRunner = new TestRunner("");
         testRunner.runTests();
     }
 
     public void runTests() {
-        Reflections reflections = new Reflections();
+        Reflections reflections = new Reflections(packageToScan);
         Set<Class<? extends TestCase>> testCases = reflections.getSubTypesOf(TestCase.class);
 
-        testCases.removeIf(testCaseClass -> testCaseClass.getName().equals("com.codegood.unittest.core.WasRun"));
+//        testCases.removeIf(testCaseClass -> testCaseClass.getName().equals("com.codegood.unittest.core.WasRun"));
         TestSuite testSuite = new TestSuite();
         testCases.forEach(testSuite::add);
         TestResult testResult = new TestResult();
