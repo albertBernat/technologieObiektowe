@@ -1,5 +1,6 @@
 package com.codegood.unittest.core;
 
+import com.codegood.unittest.report.TestStatistics;
 import com.codegood.unittest.runner.TestPrinter;
 
 import java.lang.reflect.InvocationTargetException;
@@ -10,6 +11,15 @@ import java.util.List;
 public class TestSuite {
     private final List<TestCase> tests = new LinkedList<>();
     private final TestPrinter testPrinter = new TestPrinter();
+    private final TestStatistics testStatistics;
+
+    public TestSuite() {
+        testStatistics = new TestStatistics();
+    }
+
+    public TestSuite(TestStatistics testStatistics) {
+        this.testStatistics = testStatistics;
+    }
 
     public void add(TestCase test) {
         tests.add(test);
@@ -19,6 +29,7 @@ public class TestSuite {
         tests.forEach(testCase -> {
             testCase.run(result);
             testPrinter.printCurrentTestStatus(result.getLastTestedMethodFullName(), result.isLastTestPassed());
+            testStatistics.addStatistic(result.getLastTestedMethodFullName(), result.isLastTestPassed());
         });
     }
 
