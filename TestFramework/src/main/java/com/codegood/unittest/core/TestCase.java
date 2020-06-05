@@ -43,4 +43,8 @@ public class TestCase {
 
     public void setUp() {
     }
+
+    public void fail(){
+        assert false;
+    }
 }

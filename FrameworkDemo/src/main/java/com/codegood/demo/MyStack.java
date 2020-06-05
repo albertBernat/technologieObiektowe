@@ -24,7 +24,7 @@ public class MyStack<T> {
 
     public T pop() {
         if (stack.isEmpty()) {
-            throw new RuntimeException("Can't pop empty stack");
+            throw new MyStackException("Can't pop empty stack",new RuntimeException());
         }
         return stack.remove(stack.size() -1 );
     }

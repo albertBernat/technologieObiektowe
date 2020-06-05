@@ -1,5 +1,6 @@
 package com.codegood.demo;
 
+import com.codegood.unittest.core.Assertions;
 import com.codegood.unittest.core.Test;
 import com.codegood.unittest.core.TestCase;
 
@@ -12,11 +13,6 @@ public class MyStackTest extends TestCase {
     private MyStack<String> myStack;
 
     @Override
-    public void tearDown() {
-        super.tearDown();
-    }
-
-    @Override
     public void setUp() {
         this.myStack = new MyStack<>();
     }
@@ -24,7 +20,7 @@ public class MyStackTest extends TestCase {
     @Test
     public void shouldHaveZeroElementsInStackAfterCreating(){
         //when & then
-        assert myStack.getCurrentSize() == 0;
+        Assertions.assertEquals(myStack.getCurrentSize(), 0);
     }
 
     @Test
@@ -34,7 +30,7 @@ public class MyStackTest extends TestCase {
         myStack.push("2");
         myStack.push("3");
         //then
-        assert myStack.getCurrentSize() == 3;
+        Assertions.assertEquals(myStack.getCurrentSize(),3);
     }
 
     @Test
@@ -44,7 +40,7 @@ public class MyStackTest extends TestCase {
         myStack.push("2");
         myStack.push("3");
         //then
-        assert myStack.peek().equals("3");
+        Assertions.assertEquals(myStack.peek(),"3");
     }
 
     @Test
@@ -53,7 +49,7 @@ public class MyStackTest extends TestCase {
         myStack.push("1");
         myStack.pop();
         //then
-        assert myStack.getCurrentSize() == 0;
+        Assertions.assertEquals(myStack.getCurrentSize(), 0);
     }
 
     @Test
@@ -62,7 +58,8 @@ public class MyStackTest extends TestCase {
         myStack.push("1");
         String popped = myStack.pop();
         //then
-        assert popped.equals("1");
+        Assertions.assertEquals(popped, "1");
+        fail();
     }
 
     @Test
@@ -71,7 +68,8 @@ public class MyStackTest extends TestCase {
         try {
             myStack.pop();
         } catch (RuntimeException e) {
-            assert e.getClass().getName().equals(RuntimeException.class.getName());
+            Assertions.exceptionOfType(e,MyStackException.class);
+            Assertions.exceptionHasMessageContaining(e, "empty");
         }
     }
 }
