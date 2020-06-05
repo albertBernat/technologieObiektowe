@@ -1,0 +1,10 @@
+Co zostało zrealizowane w aktualnym etapie: Dodanie mechanizmu do przeprowadzania asercji wzorowane na junit4
+
+
+Co będzie realizowane w kolejnym etapie: przełożenie generowania raportu z konsoli do pliku HTML
+
+
+Jakie są ewentualne problemy: brak
+
+
+Statystyki znajdują się w pliku: statystyki_etap6.bmp
