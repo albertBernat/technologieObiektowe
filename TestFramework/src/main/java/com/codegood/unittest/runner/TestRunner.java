@@ -4,14 +4,11 @@ import com.codegood.unittest.core.TestCase;
 import com.codegood.unittest.core.TestResult;
 import com.codegood.unittest.core.TestSuite;
 import com.codegood.unittest.report.FileUtils;
+import com.codegood.unittest.report.HTMLReportStatisticGenerator;
 import com.codegood.unittest.report.ReportFilenameGenerator;
 import com.codegood.unittest.report.TestStatistics;
-import com.codegood.unittest.report.HTMLReportStatisticGenerator;
 import org.reflections.Reflections;
 
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Set;
 
 public class TestRunner {

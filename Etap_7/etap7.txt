@@ -1,0 +1,10 @@
+Co zostało zrealizowane w aktualnym etapie: Generowanie raportu html z wykonanych testów
+
+
+Co będzie realizowane w kolejnym etapie: to już ostatni etap
+
+
+Jakie są ewentualne problemy: brak
+
+
+Statystyki znajdują się w pliku: statystyki_etap7.bmp

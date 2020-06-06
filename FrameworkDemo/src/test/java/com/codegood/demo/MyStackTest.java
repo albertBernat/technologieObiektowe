@@ -59,7 +59,7 @@ public class MyStackTest extends TestCase {
         String popped = myStack.pop();
         //then
         Assertions.assertEquals(popped, "1");
-        fail();
+//        fail();
     }
 
     @Test
